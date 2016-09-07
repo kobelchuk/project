@@ -1,0 +1,57 @@
+/*===============     general styles     ===============
+
+@import bourbon/bourbon
+
+//	Bourbon convert pixels to rems:
+//	font-size: rem(64)
+
+//	Bourbon include a clearfix for containing floats:
+//	@include clearfix
+
+$accent: #ccc
+$btn: #ccc
+//	color: $accent
+
+//	Sass color functions:
+//	color: lighten($accent, 20%)
+//	color: transparentize($accent, 0.3)
+
+@mixin tr($time)
+	-webkit-transition: all $time ease
+	-moz-transition:    all $time ease
+	-o-transition:      all $time ease
+	transition:         all $time ease
+//	@include tr(.25s)
+
+html
+	width: 100%
+	height: 100%
+
+	body
+		width: 100%
+		height: 100%
+		font: 100%/1.5em Helvetica, sans-serif
+		color: #000
+		background: #fff
+
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+
+p
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+
+/*===============     header     ===============
+
+header
+	font-size: rem(48)
+	color: green
+
+/*===============     footer     ===============
+
+

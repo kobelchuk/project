@@ -1,0 +1,38 @@
+@import bourbon/bourbon
+
+//	Bourbon convert pixels to rems:
+//	font-size: rem(64)
+
+//	Bourbon include a clearfix for containing floats:
+//	@include clearfix
+
+$accent: #ccc
+$btn: #ccc
+//	color: $accent
+
+//	Sass color functions:
+//	color: lighten($accent, 20%)
+//	color: transparentize($accent, 0.3)
+
+@mixin tr($time)
+	-webkit-transition: all $time ease
+	-moz-transition:    all $time ease
+	-o-transition:      all $time ease
+	transition:         all $time ease
+//	@include tr(.25s)
+
+//@media only screen and (max-width : 1200px)
+	body
+		color: green
+
+//@media only screen and (max-width : 992px)
+	body
+		color: green
+
+//@media only screen and (max-width : 768px)
+	body
+		color: green
+
+//@media only screen and (max-width : 480px)
+	body
+		color: green
