@@ -15,6 +15,7 @@ var gulp = require('gulp'); // Подключаем Gulp
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.sass') // Берем источник
         .pipe(sass().on("error", notify.onError())) // Преобразуем Sass в CSS посредством gulp-sass и добавляем обработчик ошибок с использованием gulp-notify
+//        .pipe(sass().on('error', sass.logError)) // Старое преобразование Sass в CSS посредством gulp-sass и обычный обработчик ошибок
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})); // Обновляем CSS на странице при изменении
