@@ -3,6 +3,7 @@
 //	Bourbon convert pixels to rems:
 //	font-size: rem(64)
 
+//	Bootstrap use Normalize.css class="clearfix"
 //	Bourbon include a clearfix for containing floats:
 //	@include clearfix
 
@@ -15,10 +16,7 @@ $btn: #ccc
 //	color: transparentize($accent, 0.3)
 
 @mixin tr($time)
-	-webkit-transition: all $time ease
-	-moz-transition:    all $time ease
-	-o-transition:      all $time ease
-	transition:         all $time ease
+	transition: all $time ease
 //	@include tr(.25s)
 
 //@media only screen and (max-width : 1200px)

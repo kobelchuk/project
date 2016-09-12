@@ -10,10 +10,11 @@ var gulp = require('gulp'); // Подключаем Gulp
     uglify = require('gulp-uglify'); // Подключаем библиотеку для минификации JS файлов
     gulpIf = require('gulp-if'); // Удостоверяемся, что uglify() запускается только для JS файлов
     cssnano = require('gulp-cssnano'); // Подключаем пакет для минификации CSS
+    notify = require("gulp-notify"); // Подключаем обработчик ошибок gulp-notify
 
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.sass') // Берем источник
-        .pipe(sass().on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass и добавляем обработчик ошибок
+        .pipe(sass().on("error", notify.onError())) // Преобразуем Sass в CSS посредством gulp-sass и добавляем обработчик ошибок с использованием gulp-notify
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})); // Обновляем CSS на странице при изменении
