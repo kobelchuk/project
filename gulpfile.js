@@ -63,7 +63,7 @@ gulp.task('img', function() { // Создаем таск img
 gulp.task('build', ['clean', 'img', 'sass', 'useref'], function() { // Создаем таск build
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
     .pipe(gulp.dest('dist/fonts'))
-    var buildJs = gulp.src('app/files/**/*') // Переносим файлы в продакшен
+    var buildFolderFiles = gulp.src('app/files/**/*') // Переносим файлы в продакшен
     .pipe(gulp.dest('dist/files'));
 });
 
